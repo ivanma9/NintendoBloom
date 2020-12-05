@@ -1,0 +1,11 @@
+.post{
+    font-family: 'Segoe UI', sans-serif;
+
+}
+.account-line{
+    padding:8px;
+}
+
+.post > p {
+    width: 100%;
+}
