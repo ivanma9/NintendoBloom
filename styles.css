@@ -1,4 +1,7 @@
 body {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
     font-size: 24px;
 }
 
@@ -18,6 +21,10 @@ body {
     margin-bottom: 15px;
     color: #32b167
 }
+.btn{
+    margin-top: 10px;
+    position: relative;
+}
 
 .search-bar{
     display: flex;
@@ -27,4 +34,57 @@ body {
     font-size: 30px;
     align-items: center;
     justify-content: center;
+}
+.Family{
+    background-color: purple;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.pokeImage{
+    background-color: #bf2727;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokeImage:nth-child(even) {
+    margin: 50px;
+}
+.first{
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.pfp {
+    width: 246px;
+    height: 246px;
+    left: 93px;
+    vertical-align: middle;
+    border: 20px solid;
+    border-color: black;
+    border-radius: 50%;
+    background-color: #5ee897;
+  }
+.usertag {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    position:relative;
+    background-color: pink;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+#imageid {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
 }
