@@ -6,12 +6,7 @@ const pokeSearchBtn4 = document.querySelector('#poke-btn4');
 const pokeSearchBtn5 = document.querySelector('#poke-btn5');
 const pokeSearchBtn6 = document.querySelector('#poke-btn6');
 const inputVal = document.querySelector('#input-number');
-const poke1 = document.querySelector('#imageid');
-const poke2 = document.querySelector('#imageid2');
-const poke3 = document.querySelector('#imageid3');
-const poke4 = document.querySelector('#imageid4');
-const poke5 = document.querySelector('#imageid5');
-const poke6 = document.querySelector('#imageid6');
+
 
 const getPokemonFromAPI = (elem) => {
     if (inputVal.tagName.length == 0)
@@ -19,28 +14,36 @@ const getPokemonFromAPI = (elem) => {
 	else {
 		
 		const name = inputVal.value;
-		fetch(`https://cors-anywhere.herokuapp.com/https://pokeapi.glitch.me/v1/pokemon/${name}`) 
+		console.log(name);
+		fetch(`https://pokeapi.co/api/v2/pokemon/${name}`) 
 		.then( (response) => response.json() )
 		.then( (resJson) => {
-            console.log(resJson[0]);
+            console.log(resJson.id);
             //var obj = JSON.parse(resJson);
-			pokeName.innerHTML = resJson[0].name + " number: " + resJson[0].number;
-			let imgURL = resJson[0].sprite;
-			console.log(imgURL);			
-			displayImage(imgURL, elem, name);
+			pokeName.innerHTML = resJson.name + " number: " + resJson.id;
+			//let imgURL = resJson[0].sprite;
+			//console.log(imgURL);			
+			//displayImage(imgURL, 200, 200, name);
+			console.log(elem);
+			grabImage(elem, resJson.id);
 		})
 		.catch( (err) => {
 			console.log(err);
 		});
 	}
 }
+function grabImage(elem, pokeID){
+	document.getElementById(elem).src = `https://pokeres.bastionbot.org/images/pokemon/${pokeID}.png`;
+}
 
-function displayImage(src, elem, alt) {
-	//let img = document.createElement("img");
-	document.getElementById(elem).src=src;
-	document.getElementById(elem).alt = alt;
-	// document.body.removeChild(document.body.lastChild);
-	// document.body.appendChild(img);
+function displayImage(src, width, height, alt) {
+	let img = document.createElement("img");
+	img.src = src;
+	img.alt = alt;
+	img.width = width;
+	img.height = height;
+	document.body.removeChild(document.body.lastChild);
+	document.body.appendChild(img);
 }
 
 function removeLastSearchImage() {
@@ -48,22 +51,23 @@ function removeLastSearchImage() {
 }
 
 function chooseElem(){
-	getPokemonFromAPI(poke1);
+	getPokemonFromAPI('imageid');
+	//getPokemonFromAPI("#imageid");
 }
 function chooseElem2(){
-	getPokemonFromAPI(poke2);
+	getPokemonFromAPI('imageid2');
 }
 function chooseElem3(){
-	getPokemonFromAPI(poke3);
+	getPokemonFromAPI('imageid3');
 }
 function chooseElem4(){
-	getPokemonFromAPI(poke4);
+	getPokemonFromAPI('imageid4');
 }
 function chooseElem5(){
-	getPokemonFromAPI(poke5);
+	getPokemonFromAPI('imageid5');
 }
 function chooseElem6(){
-	getPokemonFromAPI(poke6);
+	getPokemonFromAPI('imageid6');
 }
 
 
