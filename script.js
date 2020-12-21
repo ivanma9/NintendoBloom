@@ -7,6 +7,18 @@ const pokeSearchBtn5 = document.querySelector('#poke-btn5');
 const pokeSearchBtn6 = document.querySelector('#poke-btn6');
 const inputVal = document.querySelector('#input-number');
 
+window.onscroll = function() {stickyFunc()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function stickyFunc() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
 const getPokemonFromAPI = (elem) => {
     if (inputVal.tagName.length == 0)
