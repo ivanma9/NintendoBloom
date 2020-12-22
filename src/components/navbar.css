@@ -1,0 +1,9 @@
+#navbar li:hover {
+    background-color: #ddd;
+    color: black;
+    padding: 20px;
+}
+#navbar li.active {
+    background-color: #4CAF50;
+    color: white;
+}

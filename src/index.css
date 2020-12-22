@@ -1,13 +1,133 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.subsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+a { 
+  text-decoration: none; 
+  color: white;
+  margin: 20px;
+}
+#navbar {
+  margin-top: 30px;
+  overflow: hidden;
+  background-color: #333;
+  padding:8px;
+}
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  padding: 20px;
+}
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.fact {
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #32b167
+}
+.btn{
+  margin-top: 10px;
+  position: relative;
+}
+
+.search-bar{
+  display: flex;
+  margin: 0 auto;
+  width: 590px; height: 50px; border: 3px solid #bf2727; padding: 5px;
+  border-radius: 30px;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.Family{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.pokeDiv{
+  text-align: center;
+  background-color: #bf2727;
+
+  display: flex;
+  width: 185px;
+  height: 185px;
+  border: 5px solid;
+  border-color: black;
+  border-radius: 100%;
+  flex-direction: column;
+}
+.pokeDiv:nth-child(odd) {
+  margin-top: 220px;
+}
+.pokeImage{
+  text-align: center;
+  display: flex;
+  width: 200px;
+  height: 200px;
+}
+
+
+.first{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin:15px;
+}
+.pfp {
+  width: 246px;
+  height: 246px;
+  left: 93px;
+  vertical-align: middle;
+  text-align: center;
+
+  border: 20px solid;
+  border-color: rgb(35, 172, 40);
+  border-radius: 50%;
+  background-color: #5ee897;
+}
+.usertag {
+  width: 200px;
+  height: 50px;
+  border: 5px solid;
+  border-color: rgb(35, 172, 40);
+  border-radius: 50px; 
+  position: absolute;
+  top : 650px;
+
+  background-color: #5ee897;
+  justify-content: start;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+#imageid {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
 }
