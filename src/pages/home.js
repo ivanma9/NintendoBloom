@@ -22,18 +22,24 @@ class Home extends React.Component {
     render() {
         return (
             <div className='home page'>
-                <div className="subsection">
-                    <div>Click the button below to do nothing!</div>
+                <div class="subsection">
+                        Featured
                 </div>
+                <hr class="rounded"></hr>
                 <Slider slides={slides} />
-                <div className="subsection">
+                {/* <div style="text-align:center">
+                    // <span class="dot" onclick="currentSlide(1)"></span>
+                    // <span class="dot" onclick="currentSlide(2)"></span>
+                    // <span class="dot" onclick="currentSlide(3)"></span>
+                </div>  */}
+                <div class="subsection">
                     <div>
                         <b>Pokedex Search:</b>
                         <b>Input a pokemon name below.</b>
                     </div>
                     <input id="input-number" placeholder="Enter pokemon name"></input>
-                    <button className="btn" id="poke-btn">Click to find pokemon</button>
-                    <div className="fact" id="poke-fact"></div>
+                    <button class="btn" id="poke-btn">Click to find pokemon</button>
+                    <div class="fact" id="poke-fact"></div>
                 </div>
             </div>
         );
