@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import Home from './pages/home.js';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/navbar.js';
+import Home from './pages/home.js';
+import UserProfile from './pages/user_profile.js';
 
 class Router extends React.Component {
 	render() {
@@ -11,20 +12,15 @@ class Router extends React.Component {
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
-							<div>
-								<h2>Home</h2>
-							</div>
+							<Home />
 						</Route>
 						<Route path="/user_profile">
-							<div>
-								<h2>User Profile</h2>
-							</div>
+							<UserProfile />
 						</Route>
 					</Switch>
 				</div>
 			</BrowserRouter>
 		);
-
 	}
 }
 
