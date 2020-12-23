@@ -23,16 +23,15 @@ class Home extends React.Component {
         return (
             <div className='home page'>
                 <div class="subsection">
-                    <div>
-                        Click the button below to do nothing!
-                    </div>
+                        Featured
                 </div>
+                <hr class="rounded"></hr>
                 <Slider slides={slides} />
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
+                {/* <div style="text-align:center">
+                    // <span class="dot" onclick="currentSlide(1)"></span>
+                    // <span class="dot" onclick="currentSlide(2)"></span>
+                    // <span class="dot" onclick="currentSlide(3)"></span>
+                </div>  */}
                 <div class="subsection">
                     <div>
                         <b>Pokedex Search:</b>

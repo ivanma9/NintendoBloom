@@ -67,7 +67,7 @@ function SlideshowContainer() {
       </div>
     )
   }
-
+}
 
 ReactDOM.render(
   <React.StrictMode>
