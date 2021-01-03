@@ -6,15 +6,14 @@ class Navbar extends React.Component {
     render() {
         return (
             <div id="navbar">
-                <li>
+                <div>
                     <Link to="/">Home</Link>
-                </li>
-                <li>
                     <Link to="/user_profile">Profile</Link>
-                </li>
-                <li>
                     <Link to="#">Links</Link>
-                </li>
+                </div>
+                <div id="login">
+                    <Link to="/login">Log in</Link>
+                </div>
             </div>
         );
     }

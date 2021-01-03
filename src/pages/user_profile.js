@@ -70,22 +70,22 @@ class UserProfile extends React.Component {
                     </div>
                     <div>
                         <input id="input-number" placeholder="Enter pokemon name" ref={this.inputRef} />
-                        <button className="btn" id="poke-btn0" onClick={e => this.handleClick(e, 0)}>
+                        <button className="btn" onClick={e => this.handleClick(e, 0)}>
                             Choose pokemon buddy for profile picture
                         </button>
-                        <button className="btn" id="poke-btn1" onClick={e => this.handleClick(e, 1)}>
+                        <button className="btn" onClick={e => this.handleClick(e, 1)}>
                             Choose pokemon 1
                         </button>
-                        <button className="btn" id="poke-btn2" onClick={e => this.handleClick(e, 2)}>
+                        <button className="btn" onClick={e => this.handleClick(e, 2)}>
                             Choose pokemon 2
                         </button>
-                        <button className="btn" id="poke-btn3" onClick={e => this.handleClick(e, 3)}>
+                        <button className="btn" onClick={e => this.handleClick(e, 3)}>
                             Choose pokemon 3
                         </button>
-                        <button className="btn" id="poke-btn4" onClick={e => this.handleClick(e, 4)}>
+                        <button className="btn" onClick={e => this.handleClick(e, 4)}>
                             Choose pokemon 4
                         </button>
-                        <button className="btn" id="poke-btn5" onClick={e => this.handleClick(e, 5)}>
+                        <button className="btn" onClick={e => this.handleClick(e, 5)}>
                             Choose pokemon 5
                         </button>
                     </div>

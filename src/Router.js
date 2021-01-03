@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/navbar.js';
+import Searchbar from './components/searchbar.js'
 import Home from './pages/home.js';
 import UserProfile from './pages/user_profile.js';
 
@@ -9,6 +10,7 @@ class Router extends React.Component {
 		return (
 			<BrowserRouter>
 				<div>
+					<Searchbar />
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
